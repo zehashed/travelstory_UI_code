@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Option</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="javascripts/jquery.js"></script>
+<script src="javascripts/bootstrap.js"></script>
+<link rel="stylesheet" href="stylesheets/styles.css">
+<!--[if lt IE 9]>
+	<script src="javascripts/html5shiv.js"></script>
+	<script src="javascripts/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+  var metas = document.getElementsByTagName('meta');
+  var i;
+  if (navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)) {
+    for (i=0; i<metas.length; i++) {
+      if (metas[i].name == "viewport") {
+        metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+      }
+    }
+    document.addEventListener("gesturestart", gestureStart, false);
+  }
+  function gestureStart() {
+    for (i=0; i<metas.length; i++) {
+      if (metas[i].name == "viewport") {
+        metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+      }
+    }
+  }
+</script>
+</head>
+<body>
+<div class="container">
+  <div class="clearfix">&nbsp;</div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-sx-12">
+      <div class="gender_box">
+        <div class="gender_m">
+          <input id="radio1" type="radio" checked name="checkbox" value="1">
+          <label for="radio1">Male</label>
+        </div>
+        <div class="gender_f">
+          <input id="radio2" type="radio" name="checkbox" value="2">
+          <label for="radio2">Female</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 col-sx-12">
+      <div class="gender_box round_mf">
+        <div class="gender_m">
+          <input id="radio3" type="radio" checked name="checkbox2" value="3">
+          <label for="radio3">Male</label>
+        </div>
+        <div class="gender_f">
+          <input id="radio4" type="radio" name="checkbox2" value="4">
+          <label for="radio4">Female</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="row">
+    <div class="col-sm-4 col-sx-12">
+      <div class="agebox">She is
+        <input type="text">
+        years-old.</div>
+    </div>
+    <div class="col-sm-4 col-sx-12"><span class="btn-qmark hidden-xs" data-placement="top" data-toggle="tooltip" data-original-title="Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge.">?</span> <span class="btn-qmark visible-xs" data-toggle="modal" data-target="#myModal">?</span>
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h4 class="modal-title" id="myModalLabel">Paying Less Text</h4>
+              Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge. </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-modalclose" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sx-12">
+      <div class="dropdown" role="presentation">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="drop_menu"> PER WEEK <span class="caret"></span> </button>
+        <ul aria-labelledby="drop_menu" class="dropdown-menu" id="menu1">
+          <li><a href="#">PER WEEK</a></li>
+          <li><a href="#">PER FORTNIGHT</a></li>
+          <li><a href="#">PER MONTH</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="row">
+    <div class="col-sm-2 hidden-xs">&nbsp;</div>
+    <div class="col-sm-4 toggle_buttons">
+      <div>
+        <button type="button" class="btn btn-gray selected">Selected</button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-gray">Hover</button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-gray">Unselected</button>
+      </div>
+      <div>
+        <button type="button" class="btn btn-gray twolines">Two<br>
+        Lines</button>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div>
+        <input id="checkbox1" type="checkbox" checked name="checkbox" value="1">
+        <label for="checkbox1">
+        <span></span>Selected
+        <div class="lable_info hidden-xs" data-placement="top" data-toggle="tooltip" data-original-title="Select this and you will get a Selected Option."><span>?</span></div>
+        <div class="lable_info visible-xs" data-toggle="modal" data-target="#myModal2"><span>?</span></div>
+        </label>
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h4 class="modal-title" id="myModalLabel">Modal 2</h4>
+                Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge. </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-modalclose" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input id="checkbox2" type="checkbox" name="checkbox" value="2">
+        <label for="checkbox2">
+        <span></span>Hover
+        <div class="lable_info hidden-xs" data-placement="top" data-toggle="tooltip" data-original-title="Select this and you will get a Selected Option."><span>?</span></div>
+        <div class="lable_info visible-xs" data-toggle="modal" data-target="#myModal3"><span>?</span></div>
+        </label>
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h4 class="modal-title" id="myModalLabel">modal 3</h4>
+                Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge. </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-modalclose" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input id="checkbox3" type="checkbox" name="checkbox" value="3">
+        <label for="checkbox3">
+        <span></span>Unselected
+        <div class="lable_info hidden-xs" data-placement="top" data-toggle="tooltip" data-original-title="Select this and you will get a Selected Option."><span>?</span></div>
+        <div class="lable_info visible-xs" data-toggle="modal" data-target="#myModal4"><span>?</span></div>
+        </label>
+        <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h4 class="modal-title" id="myModalLabel">modal 4</h4>
+                Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge. </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-modalclose" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input id="checkbox4" type="checkbox" name="checkbox" value="4">
+        <label class="twolines" for="checkbox4">
+        <span></span>Two<br>
+        Lines
+        <div class="lable_info hidden-xs" data-placement="top" data-toggle="tooltip" data-original-title="Select this and you will get a Selected Option."><span>?</span></div>
+        <div class="lable_info visible-xs" data-toggle="modal" data-target="#myModal5"><span>?</span></div>
+        </label>
+        <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h4 class="modal-title" id="myModalLabel">modal 5</h4>
+                Having private health insurance might help you pay less at tax time by avoiding the Medicare Levy surcharge. </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-modalclose" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2 hidden-xs">&nbsp;</div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="row button_action">
+    <div class="col-sm-2">
+      <button class="btn btn-gray">Back</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-next">Next</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-next">Next</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-next" disabled>Next</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-skip">Skip</button>
+    </div>
+    <div class="col-sm-2">
+      <button class="btn btn-skip">Skip</button>
+    </div>
+  </div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="clearfix">&nbsp;</div>
+</div>
+<script type="text/javascript">
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
+</body>
+</html>
