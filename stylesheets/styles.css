@@ -8848,67 +8848,72 @@ input[type=checkbox]:not(old), input[type=radio]:not(old) {
   font-size: 1em;
   opacity: 0;
 }
-/* line 38, ../sass/_custom.scss */
+@media (max-width: 767px) {
+  /* line 31, ../sass/_custom.scss */
+  input[type=checkbox]:not(old), input[type=radio]:not(old) {
+    position: absolute;
+  }
+}
+/* line 41, ../sass/_custom.scss */
 input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label {
-  display: inline-block;
-  line-height: 62px;
+  display: table-cell;
   height: 64px;
+  vertical-align: middle;
   background: #f5f2f2;
   border: 1px solid #eeeded;
   margin-bottom: 10px;
-  padding: 0 20px;
+  padding: 0 45px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  min-width: 300px;
+  width: 320px;
+  max-width: 100%;
   font-weight: bold;
 }
-/* line 51, ../sass/_custom.scss */
+@media (max-width: 767px) {
+  /* line 41, ../sass/_custom.scss */
+  input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label {
+    width: 100%;
+  }
+}
+/* line 58, ../sass/_custom.scss */
 input[type=checkbox]:not(old) + label > span, input[type=radio]:not(old) + label > span {
   display: inline-block;
   width: 26px;
   height: 26px;
-  margin: 0 15px 0 0;
   border: 1px solid #989797;
   border-radius: 50%;
   vertical-align: middle;
+  position: absolute;
+  left: 10px;
+  top: 18px;
 }
-/* line 60, ../sass/_custom.scss */
-input[type=checkbox]:not(old) + label.twolines, input[type=radio]:not(old) + label.twolines {
-  line-height: 20px !important;
-  padding-top: 11px;
-}
-/* line 63, ../sass/_custom.scss */
-input[type=checkbox]:not(old) + label.twolines > span, input[type=radio]:not(old) + label.twolines > span {
-  margin-top: 8px;
-  float: left;
-}
-/* line 69, ../sass/_custom.scss */
+/* line 70, ../sass/_custom.scss */
 input[type=checkbox]:hover + label, input[type=radio]:hover + label {
   background: #e6e3e3;
   border-color: #bbb9b9;
 }
-/* line 72, ../sass/_custom.scss */
+/* line 73, ../sass/_custom.scss */
 input[type=checkbox]:hover + label .lable_info, input[type=radio]:hover + label .lable_info {
   background-color: #a9a7a7;
 }
-/* line 74, ../sass/_custom.scss */
+/* line 75, ../sass/_custom.scss */
 input[type=checkbox]:hover + label .lable_info span, input[type=radio]:hover + label .lable_info span {
   color: #a9a7a7;
 }
-/* line 79, ../sass/_custom.scss */
+/* line 80, ../sass/_custom.scss */
 input[type=checkbox]:not(old):checked + label, input[type=radio]:not(old):checked + label {
   background: #1baebb;
   border-color: #35b7c3;
   color: #fff;
 }
-/* line 83, ../sass/_custom.scss */
+/* line 84, ../sass/_custom.scss */
 input[type=checkbox]:not(old):checked + label > span, input[type=radio]:not(old):checked + label > span {
   background: none;
   border-color: #fff;
   overflow: hidden;
 }
-/* line 87, ../sass/_custom.scss */
+/* line 88, ../sass/_custom.scss */
 input[type=checkbox]:not(old):checked + label > span:before, input[type=radio]:not(old):checked + label > span:before {
   content: '';
   background-image: url(../images/tick.png);
@@ -8919,16 +8924,24 @@ input[type=checkbox]:not(old):checked + label > span:before, input[type=radio]:n
   text-align: center;
   font-weight: bold;
 }
-/* line 98, ../sass/_custom.scss */
+/* line 99, ../sass/_custom.scss */
 input[type=checkbox]:not(old):checked + label .lable_info, input[type=radio]:not(old):checked + label .lable_info {
   background-color: #26878e;
 }
-/* line 100, ../sass/_custom.scss */
+/* line 101, ../sass/_custom.scss */
 input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio]:not(old):checked + label .lable_info span {
   color: #26878e;
 }
 
-/* line 108, ../sass/_custom.scss */
+@media (max-width: 767px) {
+  /* line 108, ../sass/_custom.scss */
+  .inboxes {
+    display: table;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+}
+/* line 116, ../sass/_custom.scss */
 .gender_box input[type=radio]:not(old) + label {
   background-position: center center;
   background-repeat: no-repeat;
@@ -8938,89 +8951,88 @@ input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio
   min-width: inherit;
   text-indent: -9999px;
 }
-/* line 118, ../sass/_custom.scss */
+/* line 126, ../sass/_custom.scss */
 .gender_box .gender_m {
   display: inline-block;
 }
-/* line 121, ../sass/_custom.scss */
+/* line 129, ../sass/_custom.scss */
 .gender_box .gender_m input[type=radio]:not(old) + label {
   background-image: url(../images/boy_gray.png);
 }
-/* line 124, ../sass/_custom.scss */
+/* line 132, ../sass/_custom.scss */
 .gender_box .gender_m input[type=radio]:not(old):checked + label {
   background-image: url(../images/boy_white.png);
 }
-/* line 129, ../sass/_custom.scss */
+/* line 137, ../sass/_custom.scss */
 .gender_box .gender_f {
   display: inline-block;
 }
-/* line 132, ../sass/_custom.scss */
+/* line 140, ../sass/_custom.scss */
 .gender_box .gender_f input[type=radio]:not(old) + label {
   background-image: url(../images/girl_gray.png);
 }
-/* line 135, ../sass/_custom.scss */
+/* line 143, ../sass/_custom.scss */
 .gender_box .gender_f input[type=radio]:not(old):checked + label {
   background-image: url(../images/girl_white.png);
 }
-/* line 142, ../sass/_custom.scss */
+/* line 150, ../sass/_custom.scss */
 .gender_box.round_mf input[type=radio]:not(old) + label {
   border-radius: 50%;
 }
 
-/* line 148, ../sass/_custom.scss */
+/* line 156, ../sass/_custom.scss */
 .button_action {
   margin-top: 15px;
 }
-/* line 150, ../sass/_custom.scss */
+/* line 158, ../sass/_custom.scss */
 .button_action .btn {
-  width: 160px;
+  width: 100%;
   height: 54px;
   font-weight: bold;
   font-size: 16px;
 }
 
-/* line 158, ../sass/_custom.scss */
+/* line 166, ../sass/_custom.scss */
 .btn.btn-gray {
   background-color: #f5f2f2;
   border: 1px solid #eeeded;
 }
-/* line 161, ../sass/_custom.scss */
+/* line 169, ../sass/_custom.scss */
 .btn.btn-gray:hover {
   background-color: #e6e3e3;
   border-color: #bbb9b9;
 }
-/* line 166, ../sass/_custom.scss */
+/* line 174, ../sass/_custom.scss */
 .btn.btn-next {
   background-color: #8e72a4;
   border: 1px solid #a48db6;
   color: #fff;
 }
-/* line 170, ../sass/_custom.scss */
+/* line 178, ../sass/_custom.scss */
 .btn.btn-next:hover {
   background-color: #7a618d;
   border-color: #937ea2;
 }
-/* line 174, ../sass/_custom.scss */
+/* line 182, ../sass/_custom.scss */
 .btn.btn-next:disable, .btn.btn-next:disable::hover {
   background-color: #cdbbdd;
   border-color: #d9cae6;
 }
-/* line 179, ../sass/_custom.scss */
+/* line 187, ../sass/_custom.scss */
 .btn.btn-skip {
   background-color: #3c454e;
   border: 1px solid #616971;
   color: #fff;
 }
-/* line 183, ../sass/_custom.scss */
+/* line 191, ../sass/_custom.scss */
 .btn.btn-skip:hover {
   background-color: #282e35;
   border-color: #51565c;
 }
 
-/* line 191, ../sass/_custom.scss */
+/* line 199, ../sass/_custom.scss */
 .toggle_buttons .btn.btn-gray {
   height: 64px;
-  line-height: 62px;
   background: #f5f2f2;
   border: 1px solid #eeeded;
   margin-bottom: 10px;
@@ -9031,28 +9043,24 @@ input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio
   min-width: 300px;
   font-weight: bold;
 }
-/* line 203, ../sass/_custom.scss */
+/* line 210, ../sass/_custom.scss */
 .toggle_buttons .btn.btn-gray:hover {
   background: #e6e3e3;
   border-color: #bbb9b9;
 }
-/* line 207, ../sass/_custom.scss */
+/* line 214, ../sass/_custom.scss */
 .toggle_buttons .btn.btn-gray.selected {
   background: #1baebb;
   border-color: #35b7c3;
   color: #fff;
 }
-/* line 212, ../sass/_custom.scss */
-.toggle_buttons .btn.btn-gray.twolines {
-  line-height: 20px;
-}
 
-/* line 218, ../sass/_custom.scss */
+/* line 222, ../sass/_custom.scss */
 .agebox {
   font-size: 18px;
   font-weight: bold;
 }
-/* line 221, ../sass/_custom.scss */
+/* line 225, ../sass/_custom.scss */
 .agebox input {
   border: none;
   border-bottom: 2px dotted #333;
@@ -9061,7 +9069,7 @@ input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio
   color: #1baebb;
 }
 
-/* line 229, ../sass/_custom.scss */
+/* line 233, ../sass/_custom.scss */
 .btn-qmark {
   background-color: #949494;
   width: 20px;
@@ -9076,7 +9084,7 @@ input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio
   cursor: pointer;
 }
 
-/* line 243, ../sass/_custom.scss */
+/* line 247, ../sass/_custom.scss */
 .dropdown #drop_menu {
   background: #1baebb;
   border: 1px solid #35b7c3;
@@ -9086,34 +9094,34 @@ input[type=checkbox]:not(old):checked + label .lable_info span, input[type=radio
   text-align: center;
   line-height: 66px;
 }
-/* line 252, ../sass/_custom.scss */
+/* line 256, ../sass/_custom.scss */
 .dropdown .dropdown-menu {
   left: 7%;
   background: #3c454f;
 }
-/* line 255, ../sass/_custom.scss */
+/* line 259, ../sass/_custom.scss */
 .dropdown .dropdown-menu a {
   text-align: center;
   color: white !important;
   background: none;
 }
-/* line 259, ../sass/_custom.scss */
+/* line 263, ../sass/_custom.scss */
 .dropdown .dropdown-menu a:hover {
   color: #1baebb !important;
   background: none;
 }
 
-/* line 266, ../sass/_custom.scss */
+/* line 270, ../sass/_custom.scss */
 .modal-body {
   text-align: center;
 }
 
-/* line 267, ../sass/_custom.scss */
+/* line 271, ../sass/_custom.scss */
 .modal-body h4 {
   padding: 10px 0 20px;
 }
 
-/* line 268, ../sass/_custom.scss */
+/* line 272, ../sass/_custom.scss */
 .btn-modalclose {
   background-color: #9074a7;
   color: #fff;
